@@ -1,0 +1,19 @@
+---
+name: Runs button e2e test on push to main branch
+
+on:
+  push:
+    branches:
+      - A0-2800-push-aleph-e2e-client
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  build-aleph-e2e-client-image:
+    name: Build aleph-e2e-client image
+    uses: ./.github/workflows/_build-aleph-e2e-client-image.yml
+    with:
+      ref: the-button-mainnet-deployment
+    secrets: inherit
