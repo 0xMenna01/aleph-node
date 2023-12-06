@@ -1,5 +1,5 @@
 ---
-name: Runs button e2e test on push to main branch
+name: Tmp push
 
 on:
   push:
@@ -15,5 +15,5 @@ jobs:
     name: Build aleph-e2e-client image
     uses: ./.github/workflows/_build-aleph-e2e-client-image.yml
     with:
-      ref: the-button-mainnet-deployment
+      ref: ${{ github.ref }}
     secrets: inherit
