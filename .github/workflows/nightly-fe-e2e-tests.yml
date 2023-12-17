@@ -50,7 +50,7 @@ jobs:
       testcases: ${{ steps.get-testcases.outputs.testcases }}
     steps:
       - name: Download aleph-e2e-client artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: aleph-e2e-client
 
@@ -136,7 +136,7 @@ jobs:
           wait-for-finalized-heads: "true"
 
       - name: Download aleph-e2e-client artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: aleph-e2e-client
 

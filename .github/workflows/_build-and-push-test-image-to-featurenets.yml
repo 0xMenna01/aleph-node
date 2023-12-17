@@ -32,7 +32,7 @@ jobs:
         uses: Cardinal-Cryptography/github-actions/get-ref-properties@v5
 
       - name: Download test aleph-node artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: aleph-test-node
           path: target/release/
